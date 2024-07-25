@@ -1,0 +1,1 @@
+export const baseUrl = 'https://api.nytimes.com/svc/mostpopular/v2/';

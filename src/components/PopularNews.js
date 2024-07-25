@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NewsBlock from "./NewsBlock";
+import axios from "../axios";
 
 const PopularNews = () => {
+  const [mostPopular, setmostPopular] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("viewed/7.json")
+      .then((response) => {
+        console.log(response.data.results[0]);
+        setmostPopular(response.data.results)
+      })
+      .catch((error) => {
+        console.log("error " + error);
+      });
+  }, []);
+
   return (
     <div className="bg-white py-6">
       <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
@@ -14,11 +29,18 @@ const PopularNews = () => {
               </h2>
             </div>
             <div className="flex flex-row flex-wrap -mx-3">
-            <NewsBlock></NewsBlock>
-            <NewsBlock></NewsBlock>
-            <NewsBlock></NewsBlock>
-            <NewsBlock></NewsBlock>
+            {
+                mostPopular.map((item, index) => {
 
+                  const mediaMetadata = item.media && item.media[0] && item.media[0]['media-metadata'];
+                  const imageUrl = mediaMetadata ? mediaMetadata.find(media => media.format === 'mediumThreeByTwo440')?.url : 'https://dummyimage.com/440x293/bdbdbd/ffffff.png&text=Not+Found';
+
+                  console.log(imageUrl)
+
+                  return(<NewsBlock key={index} title={item.title} section={item.section} abstract={item.abstract} imageUrl={imageUrl} date={item.published_date} ></NewsBlock>)
+                  
+                })
+              }
             </div>
           </div>
         </div>

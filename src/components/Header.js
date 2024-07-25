@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="bg-black">
@@ -12,9 +14,12 @@ const Header = () => {
             <div className="flex flex-row">
               <ul className="navbar  flex flex-row text-gray-400 text-sm items-center font-bold">
                 <li className="active relative border-l border-gray-800 hover:bg-gray-900">
-                  <a className="block py-3 px-6 border-b-2 border-transparent" href="/" >
+                  <Link
+                    className="block py-3 px-6 border-b-2 border-transparent"
+                    to="/"
+                  >
                     Home Page
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

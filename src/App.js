@@ -1,17 +1,22 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import DetailPage from "./pages/DetailPage";
 import HomePage from "./pages/HomePage";
+import Root from "./components/Root";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    // errorElement: <NotFound />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "/:newsId", element: <DetailPage /> },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <Header></Header>
-      <HomePage></HomePage>
-      <Footer></Footer>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
-//<DetailPage></DetailPage>
 export default App;
