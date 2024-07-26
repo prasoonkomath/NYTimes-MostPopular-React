@@ -9,7 +9,7 @@ const Header = () => {
         <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
           <div className="flex justify-between h-20">
             <div className="mx-w-10 text-2xl font-bold capitalize text-white flex items-center">
-              NY Times
+              <Link to="/">NY Times</Link>
             </div>
             <div className="flex flex-row">
               <ul className="navbar  flex flex-row text-gray-400 text-sm items-center font-bold">

@@ -3,6 +3,7 @@ import "./App.css";
 import DetailPage from "./pages/DetailPage";
 import HomePage from "./pages/HomePage";
 import Root from "./components/Root";
+import { ArticleProvider } from "./context/ArticleContext";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ArticleProvider>
+      <RouterProvider router={router} />
+    </ArticleProvider>
+  );
 }
 export default App;

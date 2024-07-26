@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-12 col-md text-center">
               <p className="d-block my-3">
-                Copyright © NY Times | All rights reserved.
+                Copyright © NY Times 
               </p>
             </div>
           </div>
