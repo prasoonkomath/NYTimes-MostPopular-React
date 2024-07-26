@@ -12,22 +12,22 @@ const PopularNews = () => {
   useEffect(() => {
     if (mostPopular.length === 0) {
       setLoading(true);
-    axios.get("viewed/7.json")
-      .then((response) => {
-        setmostPopular(response.data.results);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log("error " + error);
-        setError("Error fetching article");
-        setLoading(false);
-      });
+      axios
+        .get("viewed/7.json")
+        .then((response) => {
+          setmostPopular(response.data.results);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log("error " + error);
+          setError("Error fetching article");
+          setLoading(false);
+        });
     }
   }, [setmostPopular]);
 
-  if (loading) return <div className="p-5 text-center">Loading...</div>; 
+  if (loading) return <div className="p-5 text-center">Loading...</div>;
   if (error) return <div className="p-5 text-center text-red-600">{error}</div>;
-    
 
   return (
     <div className="bg-white py-6">
