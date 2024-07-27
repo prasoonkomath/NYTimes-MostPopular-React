@@ -4,11 +4,17 @@ const NewsBlock = (props) => {
   return (
     <div className="flex flex-row flex-wrap sm:block hover-img">
       <figure>
-        <img className="max-w-full w-full mx-auto" src={props.imageUrl} alt={props.title} />
+        <img
+          className="max-w-full w-full mx-auto"
+          src={props.imageUrl}
+          alt={props.title}
+        />
       </figure>
-      
+
       <div className="py-0 sm:py-3 pt-2">
-        <h3 className="text-lg font-bold leading-tight mb-2 line-clamp-2">{props.title}</h3>
+        <h3 className="text-lg font-bold leading-tight mb-2 line-clamp-2">
+          {props.title}
+        </h3>
         <p className="text-gray-600 leading-tight mb-1 line-clamp-1">
           {props.abstract}
         </p>

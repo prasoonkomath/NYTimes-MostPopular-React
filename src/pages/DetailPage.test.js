@@ -5,6 +5,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { ArticleProvider } from '../context/ArticleContext';
 import DetailPage from './DetailPage';
 import axios from '../axios';
+import PopularNews from '../components/PopularNews';
 
 // Mock PopularNews component
 jest.mock('../components/PopularNews', () => () => <div>Popular News</div>);

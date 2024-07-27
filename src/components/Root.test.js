@@ -1,8 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider, RouteObject } from 'react-router-dom';
-import { act } from 'react'; // Import act from react
+import { act } from 'react'; 
 import Root from './Root';
+import Header from './Header';
+import Footer from './Footer';
 
 // Mock the child components
 jest.mock('./Header', () => () => <div>Header</div>);
