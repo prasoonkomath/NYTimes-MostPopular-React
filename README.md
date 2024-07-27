@@ -64,12 +64,12 @@ npm run test
 Launches the test runner in interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### Generate Test Coverage
+## Generate Test Coverage
 
 To generate test coverage reports, run:
 
 ```bash
-npx jest --coverage
+npm run test:coverage
 ```
 Generates and displays the test coverage report.\
 After running the command, a `coverage` folder will be created in the project directory. You can open the `index.html` file in the `coverage/lcov-report` folder to view the coverage report in your browser.
@@ -102,8 +102,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However, we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-
-
 ## License
 
-[MIT](https://github.com/LexIliev/ny-times-articles/blob/master/LICENSE)
+This project is licensed under the MIT License.
