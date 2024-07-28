@@ -88,6 +88,21 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 
+## Cypress UI Tests
+
+To use Cypress for UI testing, first install it using the following command:
+
+```bash
+npm install cypress --save-dev
+```
+
+#### To open the Cypress Test Runner
+```bash
+npx cypress open
+```
+This will open the Cypress Test Runner where you can configure and run your tests.
+
+
 ## Eject
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
