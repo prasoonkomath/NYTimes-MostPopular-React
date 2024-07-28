@@ -55,17 +55,17 @@ const DetailPage = () => {
         <div className="flex flex-row flex-wrap">
           <div className="flex-shrink max-w-full w-full overflow-hidden text-center">
             <div className="w-full py-3 mb-5">
-              <h2 className="text-gray-800 text-3xl font-bold">
+              <h1 className="text-gray-800 text-3xl font-bold" data-cytest-id="cy-newsTitle">
                 {article.title}
-              </h2>
+              </h1>
             </div>
 
             <div className=" max-w-xl m-auto">
-            <figure>
+            <figure data-cytest-id="cy-newsImg">
              {imageUrl && ( <img src={imageUrl} alt={article.title} className="w-full h-auto m-auto mb-5" /> )}
             </figure>
-              <p className="mb-5">{article.abstract}</p>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="mb-5" data-cytest-id="cy-newsAbstract">{article.abstract}</p>
+              <p className="text-gray-600 text-sm mb-4" data-cytest-id="cy-newsMore">
                 {article.byline} | Published on: {article.published_date}
               </p>
             </div>

@@ -30,7 +30,7 @@ const PopularNews = () => {
   if (error) return <div className="p-5 text-center text-red-600">{error}</div>;
 
   return (
-    <div className="bg-white py-6">
+    <div className="bg-white py-6" data-cytest-id="cy-popularNews">
       <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
         <div className="flex flex-row flex-wrap">
           <div className="flex-shrink max-w-full w-full overflow-hidden">

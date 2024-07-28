@@ -19,7 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -41,13 +43,14 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.40",
-    "tailwindcss": "^3.4.6",
     "@babel/preset-env": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
+    "autoprefixer": "^10.4.19",
     "babel-jest": "^26.6.3",
-    "identity-obj-proxy": "^3.0.0"
+    "cypress": "^13.13.1",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.6"
   },
   "jest": {
     "transform": {

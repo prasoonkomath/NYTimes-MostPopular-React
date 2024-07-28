@@ -8,11 +8,11 @@ const Header = () => {
       <nav className="bg-black">
         <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
           <div className="flex justify-between h-20">
-            <div className="mx-w-10 text-2xl font-bold capitalize text-white flex items-center">
+            <div className="mx-w-10 text-2xl font-bold capitalize text-white flex items-center" data-cytest-id="cy-logo">
               <Link to="/">NY Times</Link>
             </div>
             <div className="flex flex-row">
-              <ul className="navbar  flex flex-row text-gray-400 text-sm items-center font-bold">
+              <ul className="navbar  flex flex-row text-gray-400 text-sm items-center font-bold" data-cytest-id="cy-nav">
                 <li className="active relative border-l border-gray-800 hover:bg-gray-900">
                   <Link
                     className="block py-3 px-6 border-b-2 border-transparent"
